@@ -38,7 +38,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
-A method is a function that is attached to an object(or array). Methods are called like functions by typing the parentheses `()`, but methods require an object of array connected to it ( like `Object.create()`. You cannot simply type `create()` because the method needs a connected object.)
+A method is a function that is attached to an object(or array). Methods are called like functions by typing the parentheses `()`, but methods require an object or array connected to it ( like `Object.create()`. You cannot simply type `create()` because the method needs a connected object.)
 
 3. What is closure?
 
@@ -57,10 +57,11 @@ Closure is the ability of a function to seemingly remember a variable's value ou
   * The function must use `this` within its code
   * The function must be *outside* the Object
   * Whenever the function is called _with a special method_ like `.call()` or `.apply()`, the function requires an extra argument to run properly: the object that is used as the first argument in said function will take the place of any `this` words.
+  * New Binding - Contructor functions use the new keyword to assign input property values to a new object upon creation. When the construtor is declared, the `this` keyward defines properties the new object will have upon creation.
 
 5. Why do we need super() in an extended class?
 
-The keyword `extends` is used to connect a child and parent class. The `super()` keyword is used to _pass information_ between the two. Without super(), the parent class won't receive any information about the child's given properties, and the child will be unable to inherit the parent's properties.
+The keyword `extends` is used to connect a child and parent class. The `super()` keyword is used to _pass information_ between the two. Without super(), the parent class won't receive any information about the child's given properties, and the child will be unable to inherit the parent's properties, methods, and prototypes.
 
 ## Project Set up
 

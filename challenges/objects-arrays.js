@@ -35,20 +35,33 @@ const velo = {
   diet: "carnivorous",
   weight: 15,
   length: 1.8,
-  period: "Late Cretaceous"
+  period: "Late Cretaceous",
+  // speak: function() {
+  //   return `Quak`;
+  // }
 }
+
+// velo.prototype.speak = function() {
+//   return 5;
+// }
+
+// speak = () => {
+//   return this.diet
+// }
+
+// console.log(speak.call(velo));
 
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(`${tyran.weight}km`);
+console.log(`${tyran.weight}kg`);
 
 // What was the diet of a velociraptor?
 console.log(velo.diet);
 
 // How long was a stegosaurus?
-console.log(`${steg.length}km`);
+console.log(`${steg.length}m`);
 
 // What time period did tyrannosaurus live in?
 console.log(tyran.period);
