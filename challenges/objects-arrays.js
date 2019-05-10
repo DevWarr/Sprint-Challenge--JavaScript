@@ -117,16 +117,33 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
+
+// *******EXTRA FUNCTION********
+// This function simply adds extra space padding, to line up various values
+const spacePad = (string, length) => {
+  let space = length - string.length;
+  if (space > 0) {
+    string = string + (' '.repeat(space));
+  }
+  return string;
+}
+
+
+
+
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const animalNames = [];
+const animalNamesPad = [];
 zooAnimals.forEach(obj => {
-  animalNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`);
+  animalNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`)
+  animalNamesPad.push(`${spacePad(`Name: ${obj.animal_name}, `, 30)}${spacePad(`Scientific: ${obj.scientific_name}`, 37)}`);
 })
-console.log(animalNames);
+console.log(animalNames);    // Doesn't look as good in console, but will properly have one space when used for other things
+console.log(animalNamesPad); // Looks good in console, but would output extra spaces when printing of using for other things
 
 /* Request 2: .map()    
 
